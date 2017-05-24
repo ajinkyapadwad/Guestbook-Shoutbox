@@ -32,7 +32,8 @@
 
 			<div id="input">
 				<form method="post" action="process.php">
-					<input type="text" name="user" placeholder="Full Name" />
+					<input type="text" name="user" placeholder="First Name" />
+					<input type="text" name="userLast" placeholder="Last Name" />
 					<input type="text" name="email" placeholder="Email" />
 					<input type="text" name="message" placeholder="Message" />
 					<br />
