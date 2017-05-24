@@ -1,6 +1,6 @@
 <?php include 'database.php'; ?>
 <?php
-	$sql = "SELECT * FROM shouts ";
+	$sql = "SELECT * FROM shouts ORDER by id DESC";
 	$shouts = mysqli_query($connection,$sql);
 ?>
 <!DOCTYPE html>
@@ -31,6 +31,13 @@
 
 
 			<div id="input">
+			<?php if(isset($_GET['error'])) : ?>
+				<div class="error">
+					<?php
+						echo $_GET['error'];
+					?>
+				</div>
+			<?php endif; ?>
 				<form method="post" action="process.php">
 					<input type="text" name="user" placeholder="First Name" />
 					<input type="text" name="userLast" placeholder="Last Name" />
